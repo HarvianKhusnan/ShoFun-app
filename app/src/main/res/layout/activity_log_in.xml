@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgHomeScreen"
+    tools:context=".Log_in_activity">
+
+    <ImageView
+        android:id="@+id/Layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle1"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/Layout1"
+        android:src="@drawable/logintype"
+        android:layout_marginStart="162dp"
+        android:layout_marginBottom="-70dp"/>
+
+    <ImageView
+        android:id="@+id/usnm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/usernameform"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img2"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="50dp"/>
+
+    <ImageView
+        android:id="@+id/pwn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/passwordform"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/usnm"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/UsernameTXT"
+        android:layout_width="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"
+        android:hint="Username or Email"
+        android:background="@drawable/edit_text_custom"
+        android:layout_below="@id/usnm"
+        android:textColor="@color/black"
+        android:layout_marginTop="-25dp"
+        android:layout_marginLeft="76dp"/>
+
+    <EditText
+        android:id="@+id/passwordTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:background="@drawable/edit_text_custom"
+        android:layout_below="@id/pwn"
+        android:layout_marginTop="-25dp"
+        android:layout_marginLeft="76dp"/>
+
+    <ImageView
+        android:id="@+id/frgtpw"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/forgottype"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="280dp"/>
+
+    <ImageView
+        android:id="@+id/lgnbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/loginbutton"
+        android:layout_below="@id/pwn"
+        android:layout_marginTop="110dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have a account?"
+        android:layout_below="@id/lgnbtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+        />
+
+    <TextView
+        android:id="@+id/sgnbttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/lgnbtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="260dp"/>
+
+
+</RelativeLayout>
