@@ -89,7 +89,9 @@ public class sign_up_activity extends AppCompatActivity {
                             UserModel userModel = new UserModel(userName,Email,UserPassword);
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("Users").child(id).setValue(userModel);
+                            startActivity(new Intent(sign_up_activity.this,Katalog.class));
                             Toast.makeText(sign_up_activity.this, "Registration Succes", Toast.LENGTH_SHORT).show();
+
                         }else{
                             Toast.makeText(sign_up_activity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
 

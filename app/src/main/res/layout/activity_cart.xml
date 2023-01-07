@@ -26,6 +26,8 @@
             android:layout_gravity="start|center_vertical"/>
 
 
+
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -35,9 +37,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/keranjang" />
-
-
-
 
 
     </LinearLayout>
@@ -60,27 +59,45 @@
         android:layout_marginTop="200dp"
         android:layout_marginBottom="-210dp"/>
 
+    <ImageView
+        android:id="@+id/btntryon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/tyron2"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="156dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="690dp"
+        android:layout_marginBottom="110dp"
+        android:layout_above="@id/btncnftm"
+        android:text="Total Harga"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/txtTotal"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_above="@id/panelbottom"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="160dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginBottom="-600dp"
         android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="690dp"
+        android:layout_marginBottom="83dp"
+        android:layout_above="@id/btncnftm"
         android:text="Total price"
         android:textColor="@color/black" />
 
     <ImageView
+        android:id="@+id/btncnftm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/confirmnpay"
         android:layout_below="@id/panelbottom"
         android:layout_marginTop="-60dp"
         android:layout_marginLeft="115dp"/>
-
 
 
 

@@ -6,15 +6,24 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.shofun.Adapter.MyCartAdapter;
 import com.example.shofun.Models.CartModel;
 import com.example.shofun.eventbus.UpdateCartEvent;
 import com.example.shofun.listener.ICartLoadListener;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,8 +50,13 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
     ImageView btnbck;
     @BindView(R.id.txtTotal)
     TextView totalprice;
-
+    @BindView(R.id.btncnftm)
+    ImageView btncnfrm;
+    @BindView(R.id.btntryon)
+    ImageView btntry;
     ICartLoadListener cartLoadListener;
+
+
 
     @Override
     protected void onStart() {
@@ -73,7 +87,34 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
 
         init();
         loadCartFromFirebase();
+        btntry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        CartActivity.this, R.style.BottomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getApplicationContext())
+                        .inflate(
+                                R.layout.activity_information, (RelativeLayout) findViewById(R.id.bottomSheetContainer)
+
+                        );
+                bottomSheetView.findViewById(R.id.clickhere).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(CartActivity.this, "Mendirect Ke Link", Toast.LENGTH_SHORT).show();
+                        goLink("https://drive.google.com/drive/folders/13ulA5lvu5MJkoJ0rBqn-rAp9-fz9EsEQ?usp=sharing");
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
+            }
+        });
     }
+
+
 
     private void loadCartFromFirebase() {
         List<CartModel> cartModels = new ArrayList<>();
@@ -115,6 +156,15 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
         recylercart.addItemDecoration(new DividerItemDecoration(this, layoutManager.getOrientation()));
 
         btnbck.setOnClickListener(v -> finish());
+
+        btncnfrm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CartActivity.this,paymentsucces.class));
+            }
+        });
+
+
     }
 
     @Override
@@ -135,4 +185,11 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
         Snackbar.make(panelcartlayout,Message,Snackbar.LENGTH_LONG).show();
 
     }
+
+    private void goLink(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
+
+
 }
