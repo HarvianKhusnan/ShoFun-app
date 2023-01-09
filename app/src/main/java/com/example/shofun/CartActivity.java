@@ -91,7 +91,7 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
             @Override
             public void onClick(View view) {
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
-                        CartActivity.this, R.style.BottomSheetDialogTheme
+                        CartActivity.this, R.style.BottomSheetStyle
                 );
                 View bottomSheetView = LayoutInflater.from(getApplicationContext())
                         .inflate(
@@ -160,7 +160,7 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
         btncnfrm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CartActivity.this,paymentsucces.class));
+                startActivity(new Intent(CartActivity.this,address_activity.class));
             }
         });
 

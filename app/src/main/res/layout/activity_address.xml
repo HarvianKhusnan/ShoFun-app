@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgHomeScreen"
+    tools:context=".address_activity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Add Your Address"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Depan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="280dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Belakang"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="237dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:layout_marginTop="335dp"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kota/Kabupaten"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:layout_marginTop="397dp"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kode Pos"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:layout_marginTop="397dp"
+        android:layout_marginLeft="238dp"/>
+
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/formnama"
+        android:layout_marginTop="295dp"
+        android:layout_marginLeft="22dp"
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/namadepan"
+        android:hint="John"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/edit_text_custom"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/formnamabelakang"
+        android:layout_marginTop="295dp"
+        android:layout_marginLeft="230dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Lennon"
+        android:id="@+id/namabelakang"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="260dp"
+        android:background="@drawable/edit_text_custom"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="355dp"
+        android:src="@drawable/formalamat" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="12 Street"
+        android:id="@+id/alamat"
+        android:layout_marginTop="362dp"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_custom"
+        android:layout_marginLeft="50dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kota"
+        android:layout_marginTop="419dp"
+        android:layout_marginLeft="25dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_custom"
+        android:hint="Seattle"
+        android:id="@+id/kotakab"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="423dp"
+        android:layout_marginLeft="50dp"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kodepos"
+        android:layout_marginTop="419dp"
+        android:layout_marginLeft="240dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="17450"
+        android:id="@+id/kodepos"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="423dp"
+        android:layout_marginLeft="260dp"
+        android:background="@drawable/edit_text_custom"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmbtnn"
+        android:src="@drawable/confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="640dp"/>
+
+
+
+
+
+</RelativeLayout>

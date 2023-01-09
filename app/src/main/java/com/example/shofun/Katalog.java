@@ -51,6 +51,7 @@ public class Katalog extends AppCompatActivity implements IDshirtLoadListener, I
     IDshirtLoadListener shirtLoadListener;
     ICartLoadListener cartLoadListener;
 
+
     @Override
     protected void onStart() {
         super.onStart();
